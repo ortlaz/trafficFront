@@ -1,38 +1,211 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: black;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.pDivider {
+    color: black;
+    text-transform: uppercase;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 450;
+}
+
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after, ant-menu-title-content {
+    border-bottom-color: black;
+
+}
+
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open {
+
+    color: black !important;
+    border-color: black;
+}
+
+.ant-btn-background-ghost.ant-btn-primary {
+    color: white;
+    background-color: black;
+    border-color: black;
+    border-radius: 7px;
+}
+
+.ant-btn-background-ghost.ant-btn-primary:focus {
+    color: white !important;
+    background-color: black !important;
+    border-color: black;
+    border-radius: 7px;
+    box-shadow: 0 0 0 2px rgb(78 72 72 / 20%);
+}
+
+.ant-btn-background-ghost.ant-btn-primary:hover {
+    color: black;
+    border-color: black;
+}
+
+.ant-input {
+    border-color: black;
+    border-radius: 7px;
+}
+
+.ant-input:hover, .ant-input:focus, .ant-input-focused {
+    border-color: #151516;
+    box-shadow: 0 0 0 2px rgb(78 72 72 / 20%);
+    border-right-width: 1px;
+    outline: 0;
+}
+
+.ant-btn-primary, .ant-btn:focus {
+    color: #fff;
+    border-color: black;
+    background: black;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0 0 2px rgb(78 72 72 / 20%);
+}
+
+.ant-btn:hover {
+    color: black;
+    border-color: black;
+    background: white;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+    /*box-shadow:  0 0 0 1px rgb(78 72 72 / 20%);*/
+}
+
+.custom-select {
+    border-color: black;
+    box-shadow: 0 0 0 0 rgb(78 72 72 / 20%);
+    border-right-width: 1px;
+    outline: 0;
+}
+
+.custom-select:hover, .custom-select:active {
+    border-color: black !important;
+    box-shadow: 0 0 0 1px rgb(78 72 72 / 20%);
+    border-right-width: 1px;
+    outline: 0;
+}
+
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    border-color: black !important;
+    box-shadow: 0 0 0 1px rgb(78 72 72 / 20%);
+    border-right-width: 1px;
+    outline: 0;
+}
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    border-color: black !important;
+    border-radius: 7px;
+}
+
+.ant-pagination-item-active a {
+    color: black;
+}
+
+.ant-pagination-item-active a:hover {
+
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.ant-pagination-item-active {
+    border-color: black !important;
+}
+
+.ant-pagination-item-active:hover {
+    border-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+.link-secondary {
+    color: #6c757d !important;
+    padding-bottom: 14px;
+    margin-top: 10px;
+}
+.link-secondary:hover, .link-secondary:focus {
+    color: #565e64 !important;
+    border-bottom-color: black !important;
+    border-bottom: solid;
+}
+
+/*.ant-select,.ant-select-in-form-item:hover, .ant-select-in-form-item, .ant-select-single,*/
+/*.ant-select-show-arrow, .ant-select-open, .ant-form-item-control-input-content {*/
+/*    border-color: black;*/
+/*    border-radius: 7px;*/
+/*}*/
+
+.ant-table-thead > tr > th {
+    position: relative;
+    color: white;
+    font-weight: 750;
+    font-size: 16px;
+    text-align: left;
+    background: black;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.3s ease;
+}
+
+.summarizeRow{
+    background-color: rgba(5, 4, 4, 0.08);
+    font-weight: bold;
 }
