@@ -1,10 +1,11 @@
 import React from "react";
 import {Button, Col, Row, Table, Tag, Typography} from "antd";
 import {EditOutlined, FileSearchOutlined} from "@ant-design/icons";
-// import '../listStyle.css';
 import {StatusColors} from "./utils";
+import {useNavigate} from "react-router-dom";
 
-export default function LocationsList(){
+export default function LocationsList({setReport, setAuthorized}){
+    const navigate = useNavigate();
     const data = [
         {
         status: 'Требуется загрузка видео',
@@ -47,8 +48,8 @@ export default function LocationsList(){
             align:'center',
             render: ()=>(
                 <div className='menuButtons'>
-                <Button size="large" type="link"><EditOutlined/></Button>
-                <Button size="large" type="link"><FileSearchOutlined /></Button>
+                <Button size="large" type="link" onClick={()=>navigate('/location-create')}><EditOutlined/></Button>
+                <Button size="large" type="link"  onClick={()=>navigate('/week-report/height')}><FileSearchOutlined /></Button>
             </div>
             )
         },

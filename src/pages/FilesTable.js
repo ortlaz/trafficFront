@@ -49,9 +49,12 @@ export default function FilesTable({}) {
 
         },
         {
-            title: <Button type="primary" style={{
-                borderRadius: '7px'}}>Добавить</Button>,
-            // dataIndex: 'status',
+            title: <Button
+                type="primary"
+                style={{
+                    borderRadius: '7px',
+                    borderColor: 'white'
+                }}>Добавить</Button>,
             key: 'status',
             render: (record) =>
                 <div>{record.status}</div>

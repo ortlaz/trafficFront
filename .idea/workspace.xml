@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="551aed80-0aa1-4037-8fa9-0b366224b3e2" name="Changes" comment="fix unproject files">
+    <list default="true" id="551aed80-0aa1-4037-8fa9-0b366224b3e2" name="Changes" comment="адекватный antd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/FilesTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/FilesTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LocationUpdate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LocationUpdate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LocationsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LocationsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ReportMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ReportMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/WeekReport.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/WeekReport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/appLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/appLayout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/signUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signUp.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +38,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="ProjectErrors" />
@@ -49,7 +65,7 @@
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.editor",
+    "settings.editor.selected.configurable": "actions.on.save",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -88,7 +104,7 @@
       <workItem from="1686211495870" duration="1619000" />
       <workItem from="1686213126485" duration="16118000" />
       <workItem from="1686321566674" duration="176000" />
-      <workItem from="1686322993585" duration="567000" />
+      <workItem from="1686322993585" duration="7002000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1686212249259</created>
@@ -104,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686213168545</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="адекватный antd">
+      <created>1686323662377</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686323662377</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +147,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="start" />
     <MESSAGE value="fix unproject files" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix unproject files" />
+    <MESSAGE value="адекватный antd" />
+    <option name="LAST_COMMIT_MESSAGE" value="адекватный antd" />
   </component>
 </project>

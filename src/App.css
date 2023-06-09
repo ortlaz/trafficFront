@@ -181,7 +181,7 @@
 }
 
 .link-secondary:hover, .link-secondary:focus {
-    color: #565e64 !important;
+    color: #4b4f56 !important;
 }
 
 .ant-table-thead >tr>th,
@@ -194,6 +194,10 @@
     background: black !important;
     border-bottom: 1px solid #f0f0f0;
     transition: background 0.3s ease;
+}
+
+.ant-table-thead {
+    border-radius: 7px;
 }
 
 .summarizeRow {
@@ -222,6 +226,7 @@
     padding: 5px 20px;
     height: 100%;
     box-shadow: 0 0 0 0;
+    border-radius: 7px;
 }
 
 .mainButtons .ant-btn-primary:hover {
@@ -235,6 +240,7 @@
     height: 100%;
     color: #757575;
     border-color: #757575;
+    border-radius: 7px;
 }
 
 .mainButtons #signUp:hover {
@@ -245,7 +251,7 @@
 
 .signIn {
     width: 50%;
-    margin: 5% auto;
+    margin: 0 auto;
     background-color: white;
     padding: 35px;
     border-color: black;
@@ -260,6 +266,7 @@
     padding-bottom: 5px;
     height: 50%;
     box-shadow: 0 0 0 0;
+    border-radius: 7px;
 }
 
 .signIn .ant-btn-primary:hover {
@@ -267,5 +274,24 @@
     background-color: white;
 }
 .menuButtons .ant-btn:hover {
+    background-color: #f0f2f5;
     border-color: white;
+}
+.locations .ant-table-tbody >tr >td{
+    border-bottom: 20px solid #f0f2f5;
+}
+.ant-select:not(.ant-select-customize-input) .ant-select-selector{
+    border-radius: 7px;
+}
+.ant-btn-link{
+    color: black;
+}
+.locationInfo{
+    background-color: white;
+    width: 60%;
+    margin: 0 auto;
+    padding: 35px;
+    border-radius: 7px;
+    box-shadow: 0 0 2px 1px rgb(78 72 72 / 20%);
+
 }

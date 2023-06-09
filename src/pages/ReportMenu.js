@@ -18,7 +18,7 @@ allFundingLink,
             mode="horizontal"
             style={{
                 justifyContent: 'right',
-                backgroundColor: '#f5f5f5',
+                backgroundColor: '#f0f2f5',
                 fontSize: '20px',
             }}
         >

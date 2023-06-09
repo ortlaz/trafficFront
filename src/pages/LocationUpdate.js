@@ -1,6 +1,5 @@
-import React, {useEffect} from "react";
-import {Avatar, Button, Col, DatePicker, Form, Image, Row, Select, Table} from "antd";
-import {UserOutlined, SettingOutlined} from "@ant-design/icons"
+import React from "react";
+import {Button, Col, DatePicker, Form, Row, Select} from "antd";
 import {Input} from "antd/es";
 import FilesTable from "./FilesTable";
 
@@ -9,9 +8,9 @@ const {RangePicker} = DatePicker;
 export default function LocationUpdate({setAuthorized, forEdit = false}) {
     // useEffect(() => setAuthorized(true));
     return (
-        <div>
-            <p className="pDivider" style={{marginBottom: 20}}>Информация о локации</p>
-            <Form layout='vertical' style={{width: '45%', margin: '0 auto'}}>
+        <div className="locationInfo">
+            <p className="pDivider" style={{marginBottom: 20, fontSize:'20px'}}>Информация о локации</p>
+            <Form layout='vertical' style={{width: '90%', margin: '0 auto'}}>
                 {/*{forEdit && (*/}
                 <Row align='center' gutter={12}>
                     <Col xl={24} md={24} sm={24} xs={24}>

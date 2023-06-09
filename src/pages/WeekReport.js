@@ -4,7 +4,7 @@ import ReportMenu from "./ReportMenu";
 import ColumnGroup from "antd/es/table/ColumnGroup";
 import Column from "antd/es/table/Column";
 
-export default function WeekReport() {
+export default function WeekReport({setReport, report}) {
     const data = [
         {
             height: '120-130',
