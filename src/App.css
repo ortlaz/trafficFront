@@ -155,7 +155,7 @@
     outline: 0;
 }
 
-.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+.ant-select-selector {
     border-color: black !important;
     border-radius: 7px;
 }
@@ -163,9 +163,7 @@
 .ant-pagination-item-active a {
     color: black;
 }
-
 .ant-pagination-item-active a:hover {
-
     color: rgba(0, 0, 0, 0.25);
 }
 
@@ -180,32 +178,94 @@
 .link-secondary {
     color: #6c757d !important;
     padding-bottom: 14px;
-    margin-top: 10px;
 }
+
 .link-secondary:hover, .link-secondary:focus {
     color: #565e64 !important;
-    border-bottom-color: black !important;
-    border-bottom: solid;
 }
 
-/*.ant-select,.ant-select-in-form-item:hover, .ant-select-in-form-item, .ant-select-single,*/
-/*.ant-select-show-arrow, .ant-select-open, .ant-form-item-control-input-content {*/
-/*    border-color: black;*/
-/*    border-radius: 7px;*/
-/*}*/
-
-.ant-table-thead > tr > th {
+.ant-table-thead >tr>th,
+.ant-table-thead > tr > td {
     position: relative;
     color: white;
     font-weight: 750;
     font-size: 16px;
     text-align: left;
-    background: black;
+    background: black !important;
     border-bottom: 1px solid #f0f0f0;
     transition: background 0.3s ease;
 }
 
-.summarizeRow{
+.summarizeRow {
     background-color: rgba(5, 4, 4, 0.08);
     font-weight: bold;
+}
+
+.mainHeader {
+    margin: 0 auto;
+    padding: 130px 0 0 0;
+    font-size: 30px;
+    text-align: start;
+}
+
+.mainImg {
+    padding: 30px 15px;
+    font-size: 30px;
+}
+
+.mainImg img {
+    max-height: 80vh;
+}
+
+.mainButtons .ant-btn-primary {
+    font-size: 18px;
+    padding: 5px 20px;
+    height: 100%;
+    box-shadow: 0 0 0 0;
+}
+
+.mainButtons .ant-btn-primary:hover {
+    color: black;
+    background-color: white;
+}
+
+.mainButtons #signUp {
+    font-size: 18px;
+    padding: 5px 20px;
+    height: 100%;
+    color: #757575;
+    border-color: #757575;
+}
+
+.mainButtons #signUp:hover {
+    color: black;
+    background-color: white;
+    border-color: black;
+}
+
+.signIn {
+    width: 50%;
+    margin: 5% auto;
+    background-color: white;
+    padding: 35px;
+    border-color: black;
+    border-radius: 7px;
+    box-shadow: 0 0 2px 1px rgb(78 72 72 / 20%);
+}
+
+.signIn .ant-btn-primary {
+    width: 60%;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 50%;
+    box-shadow: 0 0 0 0;
+}
+
+.signIn .ant-btn-primary:hover {
+    color: black;
+    background-color: white;
+}
+.menuButtons .ant-btn:hover {
+    border-color: white;
 }

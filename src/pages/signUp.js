@@ -6,19 +6,24 @@ const {RangePicker} = DatePicker;
 export default function SignUp({setAuthorized}) {
     useEffect(() => setAuthorized(false))
     return (
-        <div style={{width: '50%', margin: '0 auto'}}>
-            <p className="pDivider" style={{marginBottom: 5}}>
+        <div className='signIn'>
+            <p className="pDivider" style={{marginBottom: 30,fontSize:'20px'}}>
                 РЕГИСТРАЦИЯ
             </p>
             <Form layout='vertical'>
                 <Row>
                     <Col xl={24} md={24} sm={24} xs={24}>
-                        <Form.Item label="Имя пользователя">
+                        <Form.Item label="ФИО">
                             <Input/>
                         </Form.Item>
                     </Col>
                     <Col xl={24} md={24} sm={24} xs={24}>
                         <Form.Item label="Email">
+                            <Input/>
+                        </Form.Item>
+                    </Col>
+                    <Col xl={24} md={24} sm={24} xs={24}>
+                        <Form.Item label="Номер контракта">
                             <Input/>
                         </Form.Item>
                     </Col>
@@ -34,7 +39,7 @@ export default function SignUp({setAuthorized}) {
                     </Col>
                 </Row>
                 <Form.Item>
-                    <Button ghost type='primary' style={{width: '100%'}}>Зарегистрироваться</Button>
+                    <Button type='primary' style={{width: '100%'}}>Зарегистрироваться</Button>
                 </Form.Item>
             </Form>
         </div>

@@ -1,16 +1,25 @@
 import {Link} from "react-router-dom";
 import React from "react";
-import {Menu, Switch} from "antd";
+import {Menu} from "antd";
+import logo from '../logo.png'
 
 export default function Header({authorized}) {
     return (
         <header>
             <nav>
-                <Menu mode="horizontal" style={{justifyContent: 'center'}}>
+                <Menu mode="horizontal" style={{justifyContent: 'start'}}>
+                    <div>
+                        <img alt="logo" src={logo}
+                             style={{
+                                 maxHeight: '35px',
+                                 paddingTop: '10%',
+                                 marginLeft: '110px'
+                             }}/>
+                    </div>
                     <Menu.Item key="home">
                         <Link to={'/'}/>Главная
                     </Menu.Item>
-                    {authorized ?
+                    {authorized &&
                         <>
                             <Menu.Item key="user">
                                 <Link to={'/user'}/>
@@ -20,16 +29,6 @@ export default function Header({authorized}) {
                                 <Link to={'/signup'}/>
                                 Регистрация
                             </Menu.Item>
-                        </> : (
-
-                            <Menu.Item key="signin">
-                                <Link to={'/signin'}/>
-                                Авторизоваться
-                            </Menu.Item>
-                        )}
-
-                    {authorized &&
-                        <>
                             <Menu.SubMenu title="Книги" key="catalog">
                                 <Menu.Item key="books">
                                     <Link to={'/books'}/>

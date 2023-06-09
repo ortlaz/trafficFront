@@ -1,19 +1,17 @@
 import React from "react";
-import {Button, Card, Col, DatePicker, Form, Row, Table, Typography} from "antd";
-import {Input} from "antd/es";
+import {Col, Row, Table, Typography} from "antd";
 import ReportMenu from "./ReportMenu";
 import ColumnGroup from "antd/es/table/ColumnGroup";
 import Column from "antd/es/table/Column";
 
 export default function WeekReport() {
-    const {Paragraph} = Typography;
     const data = [
         {
             height: '120-130',
             startTime: 3,
             endTime: 3,
             sum: 6,
-            percentage: `${6/16*100}`
+            percentage: `${6 / 16 * 100}`
         },
         {
             height: '130-140',
@@ -48,7 +46,7 @@ export default function WeekReport() {
             startTime: 5,
             endTime: 5,
             sum: 10,
-            percentage: `${10/16*100}`
+            percentage: `${10 / 16 * 100}`
         },
         {
             height: 'Итого',
@@ -67,7 +65,8 @@ export default function WeekReport() {
         }
     };
 
-    return (<Row>
+    return (
+        <Row>
             <Col xs={1} sm={2}></Col>
             <Col xs={22} sm={20}>
                 <Typography.Title
@@ -75,7 +74,11 @@ export default function WeekReport() {
                     style={{
                         margin: 0,
                     }}
-                ><h2 className="border-bottom">Видеосъемка пешеходного трафика</h2></Typography.Title>
+                >
+                    <h2 className="border-bottom">
+                        Видеосъемка пешеходного трафика
+                    </h2>
+                </Typography.Title>
                 <br/>
                 <Row>
                     <Col xl={12} md={12} sm={12} xs={24}>
@@ -85,7 +88,8 @@ export default function WeekReport() {
                                 margin: 0,
                             }}
                         >
-                            <h3><a href="https://youtu.be/jhro5tuUlIg?t=499" className="link-secondary">
+                            <h3><a href="https://youtu.be/jhro5tuUlIg?t=499"
+                                   className="link-secondary">
                                 Боровское шоссе 2Ак3</a></h3>
                         </Typography.Title>
                     </Col>

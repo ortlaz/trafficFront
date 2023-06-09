@@ -1,13 +1,11 @@
 import React, {useEffect} from "react";
-import {Button, Col, DatePicker, Form, Input, Row} from "antd";
-
-const {RangePicker} = DatePicker;
+import {Button, Col, Form, Input, Row} from "antd";
 
 export default function SignIn({setAuthorized}) {
     useEffect(() => setAuthorized(false))
     return (
-        <div style={{width: '40%', margin: '0 auto'}}>
-            <p className="pDivider" style={{marginBottom: 5}}>
+        <div  className='signIn'>
+            <p className="pDivider" style={{marginBottom: 5, fontSize:'20px'}}>
                 ВХОД
             </p>
             <Form layout='vertical'>
@@ -24,12 +22,7 @@ export default function SignIn({setAuthorized}) {
                     </Col>
                 </Row>
                 <Form.Item>
-                    <Button ghost type='primary' style={{
-                        width: '60%',
-                        paddingTop: '10px',
-                        paddingBottom: '10px',
-                        height: '100%'
-                    }}>Войти</Button>
+                    <Button type='primary'>Войти</Button>
                 </Form.Item>
             </Form>
         </div>
