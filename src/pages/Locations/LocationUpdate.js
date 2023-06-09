@@ -9,7 +9,7 @@ export default function LocationUpdate({setAuthorized, forEdit = false}) {
     // useEffect(() => setAuthorized(true));
     return (
         <div className="locationInfo">
-            <p className="pDivider" style={{marginBottom: 20, fontSize:'20px'}}>Информация о локации</p>
+            <p className="pDivider" style={{marginBottom: 0, fontSize: '20px'}}>Информация о локации</p>
             <Form layout='vertical' style={{width: '90%', margin: '0 auto'}}>
                 {/*{forEdit && (*/}
                 <Row align='center' gutter={12}>

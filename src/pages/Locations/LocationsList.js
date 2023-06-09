@@ -1,7 +1,7 @@
 import React from "react";
 import {Button, Col, Row, Table, Tag, Typography} from "antd";
 import {EditOutlined, FileSearchOutlined} from "@ant-design/icons";
-import {StatusColors} from "./utils";
+import {StatusColors} from "../utils";
 import {useNavigate} from "react-router-dom";
 
 export default function LocationsList({setReport, setAuthorized}){

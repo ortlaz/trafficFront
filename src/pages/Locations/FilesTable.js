@@ -1,9 +1,11 @@
 import {Button, Dropdown, Menu, Table} from "antd";
-import React from "react";
+import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import {UnorderedListOutlined} from "@ant-design/icons";
+import AddVideoModal from "./AddVideoModal";
 
 export default function FilesTable({}) {
+    const [visible, setVisible] = useState(false);
     const dataSource = [
         {dates: '19.05.23-20.05.23', video: 'Video354', status: 'Загружено'},
         {dates: '21.05.23-21.05.23', video: 'Video234', status: 'Загружено'}
@@ -45,7 +47,7 @@ export default function FilesTable({}) {
             // dataIndex: 'video',
             key: 'video',
             render: (record) =>
-                <a href="./FilesTable#">{record.video}</a>
+                <a href="./FilesTable.js#">{record.video}</a>
 
         },
         {
@@ -54,7 +56,9 @@ export default function FilesTable({}) {
                 style={{
                     borderRadius: '7px',
                     borderColor: 'white'
-                }}>Добавить</Button>,
+                }}
+                onClick={()=>setVisible(true)}
+            >Добавить</Button>,
             key: 'status',
             render: (record) =>
                 <div>{record.status}</div>
@@ -66,6 +70,9 @@ export default function FilesTable({}) {
         // }
     ];
 
-    return <Table columns={columns} dataSource={dataSource} scroll={{x: 101}}/>;
+    return <>
+        <Table columns={columns} dataSource={dataSource} scroll={{x: 101}}/>
+        <AddVideoModal visible={visible} setVisible={setVisible}/>
+    </>;
 }
 

@@ -4,21 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="551aed80-0aa1-4037-8fa9-0b366224b3e2" name="Changes" comment="адекватный antd">
+    <list default="true" id="551aed80-0aa1-4037-8fa9-0b366224b3e2" name="Changes" comment="дезигн">
+      <change afterPath="$PROJECT_DIR$/src/pages/Locations/AddVideoModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/FilesTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/FilesTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/LocationUpdate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LocationUpdate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/LocationsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LocationsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ReportMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ReportMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/WeekReport.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/WeekReport.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/appLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/appLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CameraUpdate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Camera/CameraUpdate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/FilesTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Locations/FilesTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LocationUpdate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Locations/LocationUpdate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LocationsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Locations/LocationsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ReportMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Report/ReportMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/WeekReport.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Report/WeekReport.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/signUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/signUp.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +64,7 @@
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "actions.on.save",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -75,6 +74,9 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages/Report" />
+      <recent name="$PROJECT_DIR$/src/pages/Locations" />
+      <recent name="$PROJECT_DIR$/src/pages/Camera" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -104,7 +106,7 @@
       <workItem from="1686211495870" duration="1619000" />
       <workItem from="1686213126485" duration="16118000" />
       <workItem from="1686321566674" duration="176000" />
-      <workItem from="1686322993585" duration="7002000" />
+      <workItem from="1686322993585" duration="10227000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1686212249259</created>
@@ -127,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686323662377</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="дезигн">
+      <created>1686330155716</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686330155716</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +157,7 @@
     <MESSAGE value="start" />
     <MESSAGE value="fix unproject files" />
     <MESSAGE value="адекватный antd" />
-    <option name="LAST_COMMIT_MESSAGE" value="адекватный antd" />
+    <MESSAGE value="дезигн" />
+    <option name="LAST_COMMIT_MESSAGE" value="дезигн" />
   </component>
 </project>

@@ -4,10 +4,10 @@ import React from "react";
 import User from "./user";
 import SignUp from "./signUp";
 import SignIn from "./signIn";
-import LocationUpdate from "./LocationUpdate";
-import CameraUpdate from "./CameraUpdate";
-import WeekReport from "./WeekReport";
-import LocationsList from "./LocationsList";
+import LocationUpdate from "./Locations/LocationUpdate";
+import CameraUpdate from "./Camera/CameraUpdate";
+import WeekReport from "./Report/WeekReport";
+import LocationsList from "./Locations/LocationsList";
 
 export default function Main({authorized, setAuthorized, report, setReport}) {
     return (
@@ -20,7 +20,7 @@ export default function Main({authorized, setAuthorized, report, setReport}) {
                 <Route path='/locations/list' element={<LocationsList setAuthorized={true}/>}/>
                 <Route path='/location-create' element={<LocationUpdate setReport={false} setAuthorized={true}/>}/>
                 <Route path='/camera-create' element={<CameraUpdate setAuthorized={true}/>}/>
-                <Route path='/week-report/height' element={<WeekReport setAuthorized={true} setReport={true} report={report}/>}/>
+                <Route path='/week-report/height' element={<WeekReport setAuthorized={true} setReport={setReport} report={report}/>}/>
             </Routes>
         </main>
     )
