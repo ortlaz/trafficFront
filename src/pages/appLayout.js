@@ -15,17 +15,20 @@ export default function AppLayout() {
     const handleChange = (val) => (
         setAuthorized(val)
     );
+    const [user, setUser] = useState({});
     return (
         <Layout style={{minHeight: '100.1vh'}}>
             <BrowserRouter>
-                <Header authorized={authorized} report={report} />
+                <Header report={report} user={user} />
                 <Content style={{margin: '2% 10%'}}>
                     <Main
                         authorized={authorized}
                         setAuthorized={setAuthorized}
                         report={report}
-                        setReport={setReport}/>
-                    {/*{children}*/}
+                        user={user}
+                        setUser={setUser}
+                        setReport={setReport}
+                    />
                 </Content>
             </BrowserRouter>
             <Footer>

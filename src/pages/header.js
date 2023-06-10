@@ -3,7 +3,7 @@ import React from "react";
 import {Menu} from "antd";
 import logo from '../logo.png'
 
-export default function Header({authorized, report}) {
+export default function Header({user, report}) {
     return (
         <header>
             <nav>
@@ -18,7 +18,7 @@ export default function Header({authorized, report}) {
                     <Menu.Item key="home">
                         <Link to={'/'}/>Главная
                     </Menu.Item>
-                    {authorized &&
+                    {user &&
                         <>
                             <Menu.Item key="user">
                                 <Link to={'/user'}/>

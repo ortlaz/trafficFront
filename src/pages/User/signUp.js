@@ -12,6 +12,11 @@ export default function SignUp({setAuthorized}) {
             <Form layout='vertical'>
                 <Row>
                     <Col xl={24} md={24} sm={24} xs={24}>
+                        <Form.Item>
+                            <Input placeholder="Имя пользователя"/>
+                        </Form.Item>
+                    </Col>
+                    <Col xl={24} md={24} sm={24} xs={24}>
                         <Form.Item label="">
                             <Input placeholder='ФИО'/>
                         </Form.Item>

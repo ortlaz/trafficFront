@@ -1,10 +1,13 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {Button, Col, Row} from "antd";
 import peopleImg from '../walking_people.png';
 import {useNavigate} from "react-router-dom";
+import {getUser} from "./User/requests";
 
-export default function Home({authorized}) {
+export default function Home() {
     const history = useNavigate();
+    const [user, setUser] = useState({});
+    useEffect(()=>getUser().then(res=>setUser(res.data)), []);
     return (
         <div>
             <Row>
@@ -12,7 +15,7 @@ export default function Home({authorized}) {
                     <div className="mainHeader">
                         <h1>Система анализа пешеходного трафика торговых помещений</h1>
                     </div>
-                    {!authorized &&
+                    {!user &&
                         <Row className="mainButtons" gutter={16}>
                             <Col>
                                 <Button type="primary" onClick={() => history('/signin')}>Вход</Button>

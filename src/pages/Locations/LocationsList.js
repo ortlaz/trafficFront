@@ -1,61 +1,72 @@
-import React from "react";
-import {Button, Col, Row, Table, Tag, Typography} from "antd";
+import React, {useEffect, useState} from "react";
+import {Button, Col, message, Row, Table, Tag, Typography} from "antd";
 import {EditOutlined, FileSearchOutlined} from "@ant-design/icons";
 import {StatusColors} from "../utils";
 import {useNavigate} from "react-router-dom";
+import {getList} from "./requests";
 
-export default function LocationsList({setReport, setAuthorized}){
+export default function LocationsList({user}) {
+    const [listData, setListData] = useState([]);
+    useEffect(
+        () => getList()
+            .then((res) =>
+                setListData(res.data))
+            .catch(error => message.error(error)),
+        []);
+
     const navigate = useNavigate();
     const data = [
         {
-        status: 'Требуется загрузка видео',
-        address: 'Боровское шоссе, 2Ак3',
-        contract_number: 'Д0003'
+            status: 'Требуется загрузка видео',
+            address: 'Боровское шоссе, 2Ак3',
+            contract_number: 'Д0003'
 
-    },
+        },
         {
-        status: 'Подтверждена',
-        address: 'Боровское шоссе, 2Ак3',
-        contract_number: 'Д0003'
-    },
+            status: 'Подтверждена',
+            address: 'Боровское шоссе, 2Ак3',
+            contract_number: 'Д0003'
+        },
     ]
     const columns = [
         {
             title: 'Статус',
             dataIndex: 'status',
             key: 'status',
-            align:'center',
-            render: (el)=>
+            align: 'center',
+            render: (el) =>
                 <Tag color={StatusColors[el]} key={el} style={{fontSize: '14px'}}>
-                {el}
-            </Tag>
+                    {el}
+                </Tag>
         },
         {
             title: 'Адрес',
             dataIndex: 'address',
             key: 'address',
-            align:'center',
+            align: 'center',
         },
         {
             title: 'Номер договора',
             dataIndex: 'contract_number',
             key: 'contract_number',
-            align:'center',
+            align: 'center',
         },
         {
             title: 'Действия',
             key: 'actions',
-            align:'center',
-            render: ()=>(
+            align: 'center',
+            render: () => (
                 <div className='menuButtons'>
-                <Button size="large" type="link" onClick={()=>navigate('/location-create')}><EditOutlined/></Button>
-                <Button size="large" type="link"  onClick={()=>navigate('/week-report/height')}><FileSearchOutlined /></Button>
-            </div>
+                    <Button size="large" type="link"
+                            onClick={() => navigate('/location-create')}><EditOutlined/></Button>
+                    <Button size="large" type="link"
+                            onClick={() => navigate('/week-report/height')}><FileSearchOutlined/></Button>
+                </div>
             )
         },
     ]
 
-    return(
+    return (
         <Row>
             <Col xs={1} sm={2}></Col>
             <Col xs={22} sm={20}>
@@ -74,7 +85,7 @@ export default function LocationsList({setReport, setAuthorized}){
                     className="locations"
                     showHeader={false}
                     columns={columns}
-                    dataSource={data}
+                    dataSource={listData}
                 />
             </Col>
             <Col xs={1} sm={2}></Col>
