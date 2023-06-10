@@ -6,6 +6,14 @@ export const getLocation = (id) => {
     return api.get(`/location/${id}`);
 }
 
+export const getContractList = () => {
+    return api.get('/contracts')
+}
+
+export const getCameraSelectList = () => {
+    return api.get('/camera-select')
+}
+
 export const createLocation = (data) => {
     return api.post("/location/list", data);
 }

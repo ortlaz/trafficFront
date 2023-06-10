@@ -1,6 +1,6 @@
-import React, {useEffect} from "react";
+import React from "react";
 import {Button, Col, Form, Input, message, Row} from "antd";
-import {getUser, logIn} from "./requests";
+import {logIn} from "./requests";
 import {useNavigate} from "react-router-dom";
 
 export default function SignIn({setUser}) {
@@ -13,7 +13,6 @@ export default function SignIn({setUser}) {
             })
             .catch(error => message.error(error))
     };
-    useEffect(()=>getUser(),[]);
     return (
         <div className='signIn'>
             <p className="pDivider" style={{marginBottom: 5, fontSize: '20px'}}>

@@ -1,42 +1,32 @@
 import React, {useEffect, useState} from "react";
 import {Button, Col, message, Row, Table, Tag, Typography} from "antd";
 import {EditOutlined, FileSearchOutlined} from "@ant-design/icons";
-import {StatusColors} from "../utils";
 import {useNavigate} from "react-router-dom";
 import {getList} from "./requests";
+import {StatusColors} from "../utils";
 
-export default function LocationsList({user}) {
+export default function LocationsList({setReport}) {
     const [listData, setListData] = useState([]);
+    useEffect(()=>setReport(false), [])
     useEffect(
-        () => getList()
-            .then((res) =>
-                setListData(res.data))
-            .catch(error => message.error(error)),
+        () => {
+            getList()
+                .then((res) =>
+                    setListData(res.data))
+                .catch(error => message.error(error))
+        },
         []);
 
     const navigate = useNavigate();
-    const data = [
-        {
-            status: 'Требуется загрузка видео',
-            address: 'Боровское шоссе, 2Ак3',
-            contract_number: 'Д0003'
-
-        },
-        {
-            status: 'Подтверждена',
-            address: 'Боровское шоссе, 2Ак3',
-            contract_number: 'Д0003'
-        },
-    ]
     const columns = [
         {
             title: 'Статус',
             dataIndex: 'status',
             key: 'status',
             align: 'center',
-            render: (el) =>
-                <Tag color={StatusColors[el]} key={el} style={{fontSize: '14px'}}>
-                    {el}
+            render: ({name}) =>
+                <Tag color={StatusColors[name]} key={name} style={{fontSize: '14px'}}>
+                    {name}
                 </Tag>
         },
         {
@@ -55,10 +45,10 @@ export default function LocationsList({user}) {
             title: 'Действия',
             key: 'actions',
             align: 'center',
-            render: () => (
+            render: (el) => (
                 <div className='menuButtons'>
                     <Button size="large" type="link"
-                            onClick={() => navigate('/location-create')}><EditOutlined/></Button>
+                            onClick={() => navigate(`/location/${el.id}`)}><EditOutlined/></Button>
                     <Button size="large" type="link"
                             onClick={() => navigate('/week-report/height')}><FileSearchOutlined/></Button>
                 </div>

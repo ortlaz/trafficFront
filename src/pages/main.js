@@ -17,8 +17,8 @@ export default function Main({authorized, setAuthorized, report, setReport, user
                 <Route exact path='/user' element={<User setAuthorized={setAuthorized}/>}/>
                 <Route path='/signup' element={<SignUp setAuthorized={true}/>}/>
                 <Route path='/signin' element={<SignIn setUser={setUser}/>}/>
-                <Route path='/locations/list' element={<LocationsList user={user}/>}/>
-                <Route path='/location-create' element={<LocationUpdate setReport={false} setAuthorized={true}/>}/>
+                <Route path='/locations/list' element={<LocationsList setReport={setReport}/>}/>
+                <Route path='/location/:id' element={<LocationUpdate setReport={false} setAuthorized={true}/>}/>
                 <Route path='/camera-create' element={<CameraUpdate setAuthorized={true}/>}/>
                 <Route path='/week-report/height' element={<WeekReport setAuthorized={true} setReport={setReport} report={report}/>}/>
             </Routes>

@@ -1,9 +1,9 @@
 import React, {useEffect} from "react";
 import {Avatar, Button} from "antd";
-import {UserOutlined, SettingOutlined} from "@ant-design/icons"
+import {SettingOutlined, UserOutlined} from "@ant-design/icons"
 
 export default function User({setAuthorized}) {
-    useEffect(() => setAuthorized(true));
+    useEffect(() => setAuthorized(true), []);
     return (
         <div>
             <p className="pDivider" style={{marginBottom: 20}}>КАРТА ПОЛЬЗОВАТЕЛЯ</p>

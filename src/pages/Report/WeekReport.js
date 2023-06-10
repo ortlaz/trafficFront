@@ -4,8 +4,8 @@ import ReportMenu from "./ReportMenu";
 import ColumnGroup from "antd/es/table/ColumnGroup";
 import Column from "antd/es/table/Column";
 
-export default function WeekReport({setReport, report}) {
-    useEffect(()=>setReport(true));
+export default function WeekReport({setReport}) {
+    useEffect(()=>setReport(true),[]);
     const data = [
         {
             height: '120-130',

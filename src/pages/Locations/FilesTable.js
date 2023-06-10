@@ -1,14 +1,15 @@
-import {Button, Dropdown, Menu, Table} from "antd";
+import {Button, Dropdown, Menu, Table, Tag} from "antd";
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import {UnorderedListOutlined} from "@ant-design/icons";
 import AddVideoModal from "./AddVideoModal";
+import {StatusColors} from "../utils";
 
 export default function FilesTable({}) {
     const [visible, setVisible] = useState(false);
     const dataSource = [
-        {dates: '19.05.23-20.05.23', video: 'Video354', status: 'Загружено'},
-        {dates: '21.05.23-21.05.23', video: 'Video234', status: 'Загружено'}
+        {date: '19.05.23-20.05.23', video: 'Video354', status: {name: 'Загружено'}},
+        {date: '21.05.23-21.05.23', video: 'Video234', status: {name: 'Загружено'}}
     ];
     const renderActions = () => {
         return (
@@ -38,9 +39,9 @@ export default function FilesTable({}) {
     };
     const columns = [
         {
-            title: 'Даты проведения работ',
-            dataIndex: 'dates',
-            key: 'dates',
+            title: 'Дата проведения работ',
+            dataIndex: 'date',
+            key: 'date',
         },
         {
             title: 'Видеозапись',
@@ -57,11 +58,15 @@ export default function FilesTable({}) {
                     borderRadius: '7px',
                     borderColor: 'white'
                 }}
-                onClick={()=>setVisible(true)}
+                onClick={() => setVisible(true)}
             >Добавить</Button>,
+            dataIndex: 'status',
             key: 'status',
-            render: (record) =>
-                <div>{record.status}</div>
+            align: 'center',
+            render: ({name}) =>
+                <Tag color={StatusColors[name]} key={name} style={{fontSize: '14px'}}>
+                    {name}
+                </Tag>
         },
         // {
         //     title: 'Действия',

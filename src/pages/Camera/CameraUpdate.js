@@ -5,7 +5,6 @@ import {Input} from "antd/es";
 const {RangePicker} = DatePicker;
 
 export default function CameraUpdate({setAuthorized, forEdit = false}) {
-    // useEffect(() => setAuthorized(true));
     return (
         <div>
             <p className="pDivider" style={{marginBottom: 20}}>Информация о видеокамере</p>
