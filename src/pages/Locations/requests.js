@@ -1,4 +1,4 @@
-import {api} from "../../http-common";
+import {api, apiFile} from "../../http-common";
 
 export const getList = () => api.get("/location/list");
 
@@ -8,6 +8,10 @@ export const getLocation = (id) => {
 
 export const getContractList = () => {
     return api.get('/contracts')
+}
+
+export const createReport = (data) => {
+    return apiFile.post('/reports', data)
 }
 
 export const getCameraSelectList = () => {

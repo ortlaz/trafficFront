@@ -4,13 +4,10 @@ import {Link} from "react-router-dom";
 import {UnorderedListOutlined} from "@ant-design/icons";
 import AddVideoModal from "./AddVideoModal";
 import {StatusColors} from "../utils";
+import moment from "moment";
 
-export default function FilesTable({}) {
+export default function FilesTable({data, idCard,  setLocationData,setReports,setLocationCamera,setCurrStatus}) {
     const [visible, setVisible] = useState(false);
-    const dataSource = [
-        {date: '19.05.23-20.05.23', video: 'Video354', status: {name: 'Загружено'}},
-        {date: '21.05.23-21.05.23', video: 'Video234', status: {name: 'Загружено'}}
-    ];
     const renderActions = () => {
         return (
             <Dropdown
@@ -42,13 +39,14 @@ export default function FilesTable({}) {
             title: 'Дата проведения работ',
             dataIndex: 'date',
             key: 'date',
+            render: (record) => moment(record).format('MMMM Do YYYY, h:mm:ss')
         },
         {
             title: 'Видеозапись',
             // dataIndex: 'video',
             key: 'video',
             render: (record) =>
-                <a href="./FilesTable.js#">{record.video}</a>
+                <a href={record.video_path}>Видео</a>
 
         },
         {
@@ -68,16 +66,17 @@ export default function FilesTable({}) {
                     {name}
                 </Tag>
         },
-        // {
-        //     title: 'Действия',
-        //     key: 'actions',
-        //     render: renderActions
-        // }
     ];
 
     return <>
-        <Table columns={columns} dataSource={dataSource} scroll={{x: 101}}/>
-        <AddVideoModal visible={visible} setVisible={setVisible}/>
+        <Table columns={columns} dataSource={data} scroll={{x: 101}}/>
+        <AddVideoModal visible={visible} setVisible={setVisible}
+                       idCard={idCard}
+                       setLocationData={setLocationData}
+                       setReports={setReports}
+                       setLocationCamera={setLocationCamera}
+                       setCurrStatus={setCurrStatus}
+        />
     </>;
 }
 

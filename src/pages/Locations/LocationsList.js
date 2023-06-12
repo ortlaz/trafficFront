@@ -50,7 +50,7 @@ export default function LocationsList({setReport}) {
                     <Button size="large" type="link"
                             onClick={() => navigate(`/location/${el.id}`)}><EditOutlined/></Button>
                     <Button size="large" type="link"
-                            onClick={() => navigate('/week-report/height')}><FileSearchOutlined/></Button>
+                            onClick={() => navigate('/week-report/height')} disabled={el.status.name!=='Подтверждена'}><FileSearchOutlined/></Button>
                 </div>
             )
         },
@@ -70,6 +70,12 @@ export default function LocationsList({setReport}) {
                         Список локаций
                     </h2>
                 </Typography.Title>
+                <br/>
+                <Row justify='end'>
+                    <Col span={4}>
+                        <Button ghost type='primary'>Создать</Button>
+                    </Col>
+                </Row>
                 <br/>
                 <Table
                     className="locations"

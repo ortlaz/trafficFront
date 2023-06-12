@@ -1,11 +1,34 @@
-import React from "react";
+import React, {useState} from "react";
 import {Col, DatePicker, Form, message, Modal, Row} from "antd";
 import Dragger from "antd/es/upload/Dragger";
 import {InboxOutlined} from "@ant-design/icons";
 import locale from "antd/es/date-picker/locale/ru_RU";
+import {createReport, getLocation} from "./requests";
+import {useForm} from "antd/es/form/Form";
 
-export default function AddVideoModal({visible, setVisible}) {
-    const handleOk = () => {
+export default function AddVideoModal({visible, setVisible, idCard,
+                                          setLocationData,
+                                          setReports,
+                                          setLocationCamera,
+                                          setCurrStatus}) {
+    const [form] = useForm();
+    const [videoFile, setVideoFile] = useState();
+    const handleSubmit = (data) => {
+        let reportFormData = new FormData();
+        reportFormData.append('video_file', videoFile);
+        reportFormData.append('date', data.date);
+        createReport(reportFormData).then(()=>getLocation(idCard)
+            .then((res) => {
+                setLocationData(res.data);
+                setReports(res.data.location_report);
+                setLocationCamera(res.data.location_camera.map(el => el.name));
+                setCurrStatus(res.data.status.name)
+            })
+            .catch((err) => message.error(err))).catch((err)=>message.error(err))
+
+    }
+    const handleOk = (data) => {
+        form.submit();
         setVisible(false)
     }
     const handleCancel = () => {
@@ -13,22 +36,10 @@ export default function AddVideoModal({visible, setVisible}) {
     }
     const props = {
         name: 'file',
-        multiple: true,
-        action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
-        onChange(info) {
-            const {status} = info.file;
-            if (status !== 'uploading') {
-                console.log(info.file, info.fileList);
-            }
-            if (status === 'done') {
-                message.success(`${info.file.name} file uploaded successfully.`);
-            } else if (status === 'error') {
-                message.error(`${info.file.name} file upload failed.`);
-            }
-        },
-        onDrop(e) {
-            console.log('Dropped files', e.dataTransfer.files);
-        },
+        multiple: false,
+        onChange: (info) => {
+            setVideoFile(info.file.originFileObj);
+        }
     };
     return (
         <Modal
@@ -36,10 +47,10 @@ export default function AddVideoModal({visible, setVisible}) {
             open={visible}
             onOk={handleOk}
             onCancel={handleCancel}>
-            <Form layout='vertical'>
+            <Form layout='vertical' form={form} onFinish={handleSubmit}>
                 <Row>
                     <Col xl={24} md={24} sm={24} xs={24}>
-                        <Form.Item>
+                        <Form.Item name={'date'}>
                             <DatePicker
                                 placeholder="Дата съемки"
                                 style={{width: '100%'}}

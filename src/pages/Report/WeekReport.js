@@ -106,8 +106,8 @@ export default function WeekReport({setReport}) {
                 <Table dataSource={data} onRow={(record) => setRowClass(record)}>
                     <Column title="Рост, см" dataIndex="height" key="height"/>
                     <ColumnGroup title="Период подсчета">
-                        <Column title="0:03-0:04" dataIndex="startTime" key="startTime"/>
-                        <Column title="0:04-0:05" dataIndex="endTime" key="endTime"/>
+                        <Column title="9.06.23" dataIndex="startTime" key="startTime"/>
+                        <Column title="12.06.23" dataIndex="endTime" key="endTime"/>
                     </ColumnGroup>
                     <Column title="Общее за всё время" dataIndex="sum" key="sum"/>
                     <Column title="% от общего" dataIndex="percentage" key="percentage"/>

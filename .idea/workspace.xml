@@ -4,19 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="551aed80-0aa1-4037-8fa9-0b366224b3e2" name="Changes" comment="connect to backend">
+    <list default="true" id="551aed80-0aa1-4037-8fa9-0b366224b3e2" name="Changes" comment="location update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Camera/CameraUpdate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Camera/CameraUpdate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http-common.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/http-common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Locations/AddVideoModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Locations/AddVideoModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Locations/FilesTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Locations/FilesTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Locations/LocationUpdate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Locations/LocationUpdate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Locations/LocationsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Locations/LocationsList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Locations/requests.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Locations/requests.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Report/WeekReport.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Report/WeekReport.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/User/signIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/User/signIn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/User/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/User/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/header.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +104,7 @@
       <workItem from="1686211495870" duration="1619000" />
       <workItem from="1686213126485" duration="16118000" />
       <workItem from="1686321566674" duration="176000" />
-      <workItem from="1686322993585" duration="28675000" />
+      <workItem from="1686322993585" duration="47522000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1686212249259</created>
@@ -158,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686419693526</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="location update">
+      <created>1686434645151</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1686434645151</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +187,7 @@
     <MESSAGE value="модалочка" />
     <MESSAGE value="eslint" />
     <MESSAGE value="connect to backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="connect to backend" />
+    <MESSAGE value="location update" />
+    <option name="LAST_COMMIT_MESSAGE" value="location update" />
   </component>
 </project>

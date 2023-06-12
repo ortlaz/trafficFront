@@ -37,10 +37,10 @@ export default function Header({user, report}) {
                                     <Link to={'/week-report/height'}/>
                                     Общая статистика
                                 </Menu.Item>
-                                <Menu.Item key="resultReport">
-                                    <Link to={'/result-report'}/>
-                                    Итоговые показатели
-                                </Menu.Item>
+                                {/*<Menu.Item key="resultReport">*/}
+                                {/*    <Link to={'/result-report'}/>*/}
+                                {/*    Итоговые показатели*/}
+                                {/*</Menu.Item>*/}
                             </>}
                         </>}
                 </Menu>
