@@ -12,6 +12,10 @@ export const logIn = (data) => {
     return api.post("/login", data);
 }
 
+export const logOut = () => {
+    return api.post("/logout",);
+}
+
 export const signUp = (data) => {
     return api.post("/user", data);
 }

@@ -6,7 +6,7 @@ import {getUser} from "./User/requests";
 
 export default function Home() {
     const history = useNavigate();
-    const [user, setUser] = useState({});
+    const [user, setUser] = useState(null);
     useEffect(()=> {
         getUser().then((res) => {
             setUser(res.data);

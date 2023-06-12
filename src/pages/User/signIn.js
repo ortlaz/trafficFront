@@ -10,6 +10,7 @@ export default function SignIn({setUser}) {
             .then(res => {
                 setUser(res.data);
                 navigate('/locations/list');
+                window.location.reload();
             })
             .catch(error => message.error(error))
     };

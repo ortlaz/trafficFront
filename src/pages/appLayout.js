@@ -1,6 +1,6 @@
 /** @format */
 
-import {Layout, Switch} from 'antd';
+import {Layout} from 'antd';
 import {BrowserRouter} from 'react-router-dom';
 import React, {useState} from "react";
 import Header from "./header";
@@ -15,7 +15,7 @@ export default function AppLayout() {
     const handleChange = (val) => (
         setAuthorized(val)
     );
-    const [user, setUser] = useState({});
+    const [user, setUser] = useState(null);
     return (
         <Layout style={{minHeight: '100.1vh'}}>
             <BrowserRouter>
@@ -31,9 +31,9 @@ export default function AppLayout() {
                     />
                 </Content>
             </BrowserRouter>
-            <Footer>
-                <Switch size='small' onChange={handleChange}/>
-            </Footer>
+            {/*<Footer>*/}
+            {/*    <Switch size='small' onChange={handleChange}/>*/}
+            {/*</Footer>*/}
         </Layout>
     );
 }

@@ -1,9 +1,16 @@
 import {Link} from "react-router-dom";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {Menu} from "antd";
 import logo from '../logo.png'
+import {getUser} from "./User/requests";
 
-export default function Header({user, report}) {
+export default function Header({report}) {
+    const [user,setUser] = useState(null);
+    useEffect(()=> {
+        getUser().then((res) => {
+            setUser(res.data);
+        })
+    }, []);
     return (
         <header>
             <nav>
